@@ -2,10 +2,9 @@ from django.db import models
 
 
 class StudentModel(models.Model):
-    first_name = models.CharField(max_length=44, null=False)
-    last_name = models.CharField(max_length=44, null=False)
-    age = models.IntegerField(null=False)
-    title = models.CharField(max_length=22, default='Student')
+    first_name = models.CharField(max_length=44, null=True)
+    last_name = models.CharField(max_length=44, null=True)
+    age = models.IntegerField(null=True)
     objects = models.Manager()
 
     def __str__(self):
